@@ -5,6 +5,18 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+/Temp
+/Library
+/Obj
+/UnityGenerated
+/Build
+/Builds
+/*.sln
+/Assembly-CSharp.csproj
+*.suo
+*.user
+*.userprefs
+
 # Visual Studio cache directory
 .vs/
 
