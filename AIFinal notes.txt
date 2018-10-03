@@ -1,0 +1,45 @@
+adaptive enemy spawner notes
+-will spawn enemies based on how well the player(s) during the level
+/game
+avg time beat 
+ normal, 
+ elite, spawn rate .25
+ boss spawn rate .1
+mob = group of enemies
+mob time = time of all enemies in mob
+split lvl into spawn points
++---+---+   +---+ m = a specific spawn point
+|   |   |   |   | n = total #'s of spawn points
++---+---+...+---+
+ 1/n 2/n     m/n
+
+player time < mob time
+more enemies
+upgraded enemies appear more often
+normal->elite
+elite->boss
+more spawn points
+player time > mob time
+less enemies
+upgraded enemies--
+less spawn points
+
+Problems:
+-need to know specs of partners computer 
+so don't crazy
+-not enough enemies variety
+
+explaination/pitch
+
+-game's difficulty will change based on player perfomance.
+-game will track time for players to destory mob
+-game will have par time for a group
+ par time = total average time for all enemies in a group
+-player time lower than par
+ -more enemies
+ -more spawnpoints
+ -harder enemies appear more often
+-player time higher than par
+ -less enemies
+ -less spawnpoints
+ -less harder enemies
