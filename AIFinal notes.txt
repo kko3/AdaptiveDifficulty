@@ -29,6 +29,22 @@ Problems:
 so don't crazy
 -not enough enemies variety
 
+extra thoughts
+-difference between enemy amount,variety,time between groups
+when should they change
+-do we need to add ammo/health pickup
+goal level time to beat enemies(times may change):
+time to beat lvl 90 secs
+15 secs par per spawn
+normal(bears): 1
+elite(bunnies): 2
+boss(elephant): 4
+
+different attack patterns for each enemies
+everything is on fire and this won't work
+need some type of damaging model and a way to move the gun around 
+to target different areas of the body 
+
 explaination/pitch
 
 -game's difficulty will change based on player perfomance.
