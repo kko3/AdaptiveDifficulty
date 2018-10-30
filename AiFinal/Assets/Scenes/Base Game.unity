@@ -459,6 +459,7 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!95 &369628829
 Animator:
   serializedVersion: 3
@@ -489,6 +490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   anim: {fileID: 0}
+=======
+>>>>>>> parent of 058377f... completed tutorial
 =======
 >>>>>>> parent of 058377f... completed tutorial
 --- !u!1 &417038449
