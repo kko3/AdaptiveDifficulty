@@ -252,7 +252,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   enemy: {fileID: 192206, guid: 192fd950c783bbb4ebcb865c77d7eff7, type: 2}
+  enemyName: ZomBunny
   spawnTime: 3
+  spawnCount: 10
+  enemyWaves: 3
   spawnPoints:
   - {fileID: 2096275873}
 --- !u!4 &269501425
@@ -274,14 +277,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269501423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   enemy: {fileID: 104722, guid: 2f8e5dcb17eda3542bf9cd4ef63425e3, type: 2}
+  enemyName: Hellephant
   spawnTime: 3
+  spawnCount: 10
+  enemyWaves: 3
   spawnPoints:
   - {fileID: 1602484500}
 --- !u!114 &269501427
@@ -290,14 +296,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269501423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   enemy: {fileID: 100000, guid: ffdde77c7de2ec246907b187471ed7d0, type: 2}
+  enemyName: ZomBear
   spawnTime: 3
+  spawnCount: 10
+  enemyWaves: 3
   spawnPoints:
   - {fileID: 1978224292}
 --- !u!1 &323908386
@@ -1105,6 +1114,14 @@ Prefab:
     - target: {fileID: 12063780, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
       propertyPath: m_Parameters.endWidth
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429046, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: startingHealth
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429046, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: currentHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
