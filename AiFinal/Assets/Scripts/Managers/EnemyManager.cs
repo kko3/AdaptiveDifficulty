@@ -5,7 +5,7 @@ public class EnemyManager : MonoBehaviour
     public PlayerHealth playerHealth;
     public GameObject enemy;
     //type of enemy being spawned **for testing purposes**
-    public string enemyName = "PlaceHolder";
+    //public string enemyName = "PlaceHolder";
     public float timeTilSpawn= 3f;
     public float timeBetweenSpawn = 3f;
     public int spawnCount = 10;
@@ -28,6 +28,6 @@ public class EnemyManager : MonoBehaviour
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
         Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
         if (--spawnCount == 0) { CancelInvoke("Spawn"); }
-        Debug.Log(enemyName + " Spawn Count: " + spawnCount);
+        //Debug.Log(enemyName + " Spawn Count: " + spawnCount);
     }
 }
