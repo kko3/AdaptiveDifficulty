@@ -252,8 +252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   enemy: {fileID: 192206, guid: 192fd950c783bbb4ebcb865c77d7eff7, type: 2}
-  enemyName: ZomBunny
-  spawnTime: 3
+  timeTilSpawn: 3
+  timeBetweenSpawn: 3
   spawnCount: 10
   enemyWaves: 3
   spawnPoints:
@@ -284,8 +284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   enemy: {fileID: 104722, guid: 2f8e5dcb17eda3542bf9cd4ef63425e3, type: 2}
-  enemyName: Hellephant
-  spawnTime: 3
+  timeTilSpawn: 3
+  timeBetweenSpawn: 3
   spawnCount: 10
   enemyWaves: 3
   spawnPoints:
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1952068994}
   enemy: {fileID: 100000, guid: ffdde77c7de2ec246907b187471ed7d0, type: 2}
-  enemyName: ZomBear
-  spawnTime: 3
+  timeTilSpawn: 3
+  timeBetweenSpawn: 3
   spawnCount: 10
   enemyWaves: 3
   spawnPoints:
