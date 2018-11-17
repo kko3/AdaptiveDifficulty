@@ -17,6 +17,10 @@ public class EnemyManager : MonoBehaviour
         InvokeRepeating("Spawn", timeTilSpawn, timeBetweenSpawn);
     }
 
+    void Update()
+    {
+    }
+
 
     void Spawn ()
     {
