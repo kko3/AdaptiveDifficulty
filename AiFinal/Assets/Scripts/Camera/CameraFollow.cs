@@ -3,21 +3,50 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
-    public Transform target;
+    [SerializeField]
+    private Transform target;
 
-    public float smoothing = 5.0f;
+    [SerializeField]
+    private Vector3 offsetPosition;
 
-    Vector3 offset;
+    [SerializeField]
+    private Space offsetPositionSpace = Space.Self;
 
-    void Start()
+    [SerializeField]
+    private bool lookAt = true;
+
+    private void LateUpdate()
     {
-        offset = transform.position - target.position;
+        Refresh();
     }
 
-    void FixedUpdate()
+    public void Refresh()
     {
-        
-        Vector3 targetCamPos = target.position + offset;
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+        if (target == null)
+        {
+            Debug.LogWarning("Missing target ref !", this);
+
+            return;
+        }
+
+        // compute position
+        if (offsetPositionSpace == Space.Self)
+        {
+            transform.position = target.TransformPoint(offsetPosition);
+        }
+        else
+        {
+            transform.position = target.position + offsetPosition;
+        }
+
+        // compute rotation
+        if (lookAt)
+        {
+            transform.LookAt(target);
+        }
+        else
+        {
+            transform.rotation = target.rotation;
+        }
     }
 }

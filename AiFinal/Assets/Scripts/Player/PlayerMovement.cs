@@ -2,42 +2,30 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 6f;
 
-    Vector3 movement;
+
+    public float speed;
+
+    Rigidbody rb;
     Animator anim;
-    Rigidbody playerRigidbody;
-    int floorMask;
-    float camRayLength = 100f;
 
-    void Awake()
+    void Start()
     {
-        floorMask = LayerMask.GetMask("Floor");
+        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        playerRigidbody = GetComponent<Rigidbody>();
     }
+
     void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");        
 
-        Move(h, v);
-        Turning();
-        Animating(h, v);
-    }
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-    void Move(float h, float v)
-    {
-        movement.Set(h, 0f, v);
+        rb.AddForce(movement * speed);
 
-        movement = movement.normalized * speed * Time.deltaTime;
+        Animating(moveHorizontal, moveVertical);
 
-        playerRigidbody.MovePosition(transform.position + movement);
-    }
-
-    void Turning()
-    {
-        
     }
 
     void Animating(float h, float v)
