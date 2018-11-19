@@ -9,10 +9,21 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     Animator anim;
 
+    public float speedH = 2.0f;
+
+    private float yaw = 0.0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        yaw += speedH * Input.GetAxis("Mouse X");
+
+        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
     }
 
     void FixedUpdate()
