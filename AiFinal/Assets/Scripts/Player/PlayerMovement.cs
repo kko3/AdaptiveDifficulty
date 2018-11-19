@@ -2,53 +2,41 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 6f;
 
-    Vector3 movement;
+
+    public float speed;
+
+    Rigidbody rb;
     Animator anim;
-    Rigidbody playerRigidbody;
-    int floorMask;
-    float camRayLength = 100f;
 
-    void Awake()
+    public float speedH = 2.0f;
+
+    private float yaw = 0.0f;
+
+    void Start()
     {
-        floorMask = LayerMask.GetMask("Floor");
+        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        playerRigidbody = GetComponent<Rigidbody>();
     }
+
+    void Update()
+    {
+        yaw += speedH * Input.GetAxis("Mouse X");
+
+        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+    }
+
     void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");        
 
-        Move(h, v);
-        Turning();
-        Animating(h, v);
-    }
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-    void Move(float h, float v)
-    {
-        movement.Set(h, 0f, v);
+        rb.AddRelativeForce(movement * speed);
 
-        movement = movement.normalized * speed * Time.deltaTime;
+        Animating(moveHorizontal, moveVertical);
 
-        playerRigidbody.MovePosition(transform.position + movement);
-    }
-
-    void Turning()
-    {
-        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit floorHit;
-
-        if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
-        {
-            Vector3 playerToMouse = floorHit.point - transform.position;
-            playerToMouse.y = 0f;
-
-            Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-            playerRigidbody.MoveRotation(newRotation);
-        }
     }
 
     void Animating(float h, float v)
