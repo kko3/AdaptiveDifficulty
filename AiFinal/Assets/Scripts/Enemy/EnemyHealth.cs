@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
 
+    float timer = 0.0f;
 
     Animator anim;
     AudioSource enemyAudio;
@@ -30,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update ()
     {
+        timer += Time.deltaTime;
         if(isSinking)
         {
             transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
@@ -63,6 +65,9 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider.isTrigger = true;
 
         anim.SetTrigger ("Dead");
+
+        //seconds = System.Convert.ToInt32(timer % 60);
+        Debug.Log(timer);
 
         enemyAudio.clip = deathClip;
         enemyAudio.Play ();
