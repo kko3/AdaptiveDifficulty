@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Debug.Log(pitch);
-        if (pitch >= minRotation && pitch <= maxRotation)
+        if (pitch >= -1 * maxRotation && pitch <= minRotation)
         {
             transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
         }
