@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public float speedV = 2.0f;
     public bool inverse = false;
 
+    public int minRotation = -20;
+    public int maxRotation = 20;
+
     private float yaw = 0.0f;
     private float pitch = 0.0f;
 
@@ -34,7 +37,12 @@ public class PlayerMovement : MonoBehaviour
             pitch += -1 * speedV * Input.GetAxis("Mouse Y");
         }
 
-        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        Debug.Log(pitch);
+        if (pitch >= minRotation && pitch <= maxRotation)
+        {
+            transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        }
+
     }
 
     void FixedUpdate()

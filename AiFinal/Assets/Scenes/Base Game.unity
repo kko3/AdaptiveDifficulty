@@ -634,6 +634,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573878325}
+--- !u!1 &702772256 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 127360, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+  m_PrefabInternal: {fileID: 1891968225}
 --- !u!1 &841198198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1433,22 @@ Prefab:
     - target: {fileID: 444768, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 460944, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424468, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: gO
+      value: 
+      objectReference: {fileID: 702772256}
+    - target: {fileID: 11424468, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: minRotation
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424468, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: maxRotation
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
