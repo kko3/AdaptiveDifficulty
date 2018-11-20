@@ -1444,11 +1444,11 @@ Prefab:
       objectReference: {fileID: 702772256}
     - target: {fileID: 11424468, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
       propertyPath: minRotation
-      value: -10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11424468, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
       propertyPath: maxRotation
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11448850, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
       propertyPath: timeBetweenBullets
