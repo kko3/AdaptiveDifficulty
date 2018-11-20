@@ -1454,6 +1454,10 @@ Prefab:
       propertyPath: timeBetweenBullets
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5499378, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: accfbb65705a61244a444a9e02ca76fb, type: 2}
   m_IsPrefabParent: 0
