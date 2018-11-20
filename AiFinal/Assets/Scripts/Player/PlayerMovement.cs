@@ -10,8 +10,11 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
 
     public float speedH = 2.0f;
+    public float speedV = 2.0f;
+    public bool inverse = false;
 
     private float yaw = 0.0f;
+    private float pitch = 0.0f;
 
     void Start()
     {
@@ -22,8 +25,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         yaw += speedH * Input.GetAxis("Mouse X");
+        if (inverse)
+        {
+            pitch +=  speedV * Input.GetAxis("Mouse Y");
+        }
+        else
+        {
+            pitch += -1 * speedV * Input.GetAxis("Mouse Y");
+        }
 
-        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
     }
 
     void FixedUpdate()
